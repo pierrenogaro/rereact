@@ -1,28 +1,20 @@
 import './App.css'
+import MovieCard from "./components/MovieCard.jsx";
 
 function App() {
-
-  return (
-  <>
-      <div>
-          <Text display="whats up"/>
-          <Text display="hello"/>
-
-      </div>
-  </>
-  )
+    const movieNumber = 1;
+    if (movieNumber === 1) {
+        return (
+            <>
+                {movieNumber === 1 ? (
+                    <MovieCard movie={{title :"Harry Potter", release_date: "2004"}}/>
+                    ) :  (
+                    <MovieCard movie={{title :"Interstellar", release_date: "2020"}}/>
+                    )
+                }
+            </>
+        )
+    }
 }
-
-function Text({display}) {
-
-    return (
-        <>
-            <div>
-                <p>{display}</p>
-            </div>
-        </>
-    )
-}
-
 
 export default App
